@@ -47,6 +47,7 @@ The buttons at the bottom right (see [[Interface#The row of buttons|Interface]])
 - `C`: the character panel.
 - `N`: the build palette (see [[Building]]). Not with the bag open: the game says "Close your bag to build."
 - `H`: with the build palette open, puts every wall on your floor down to its foot, and again raises them (see [[Building]]).
+- **Walk here** (right-click menu) now takes two steps: an outline follows the cursor's tile (white where you can stand, red where not), and a left click walks there; Escape or a right click cancels.
 - `P`: the Planning panel, rulers laid on the ground that stay (see [[Planning]]). Not with the bag open, as `N`.
 - `X`: Take apart, which highlights what players built or made; a click takes it apart for half its materials (see [[Building]]). Not with the bag open, as `N`.
 - `R`: turn the thing being placed; rotate an item being dragged.

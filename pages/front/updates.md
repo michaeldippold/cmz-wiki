@@ -9,6 +9,13 @@ numbersOk: true
 
 Each time the wiki is synced with the game, an entry goes here, newest first, with the pages it touched. The game itself is in development; its own decision log is `docs/02-decisions.md` in the game's repository.
 
+## 2026-10-31: synced to `5114c2f`
+
+- **Changed in the game:** villagers never follow you or stay where told (Michael struck the plan; game #620). [[Villagers]], Planned.
+- **Fixed in the game:** the mana potion's splash card names players only; the empty clay jar rides the belt as an empty vial does; the stone wall and the battlement say their own words without Free building, and nothing hangs on a battlement; the portcullis rises and falls in half a second (game #620). [[Castle gates]].
+- **Changed in the game:** Walk here in two steps: an outline on the tile, then a left click (game #621). [[Controls]].
+- **New in the game:** the 1-wide stone gate and stone arches 1, 2, and 3 wide (game #623, art round 14a). [[Castle gates]].
+
 ## 2026-10-31: synced to `4b035da`
 
 - **Fixed in the game:** **a tower's top drawn round** (game #618, Michael's playtest of 2026-10-31): a floor over a round tower is cut to its wall and its corners filled, a whole disc to the rim. [[Round rooms]] updated.

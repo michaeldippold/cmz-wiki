@@ -14,7 +14,7 @@ A villager still fears the dead, on its own floor alone: one of the dead a store
 
 {{villager-table}}
 
-{{planned doc=04 note="Villagers who flee from the dead (beyond the cowering), follow you, and stay where you ask."}}
+{{planned doc=04 note="Villagers who flee from the dead (beyond the cowering). A villager never follows you or stays where you ask: Michael struck that on 2026-10-31."}}
 
 {{planned doc=34 note="Villagers who teach a skill."}}
 

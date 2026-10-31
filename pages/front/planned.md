@@ -26,7 +26,7 @@ Fishing, apple trees, farming, the farms and the mill, the bucket and the scythe
 The map on M and talk with villagers, barks and conversations both, once planned here, are built: see [[Map]], [[Talk]], and [[Wyn]].
 
 
-- **Villagers who flee, follow, and stay** (`docs/04`).
+- **Villagers who flee** (`docs/04`; following and staying were struck by Michael on 2026-10-31).
 - **Infection's effects and cures** (a marker today).
 - **Better animations** (`docs/32`): sleeping in a bed, sitting, deaths.
 - **More magic** (`docs/24`): the [[Fireball]], its cost in [[Mana]], and the [[Throwing knife|throwing knives]] and [[Throwing axe|axes]] are built; other spells are not.

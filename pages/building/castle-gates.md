@@ -38,7 +38,7 @@ It is built on the floor you stand on.
 
 E, or the entry in its right-click menu, opens a gate or shuts it from either side, within the usual E reach (see [[Controls]]). The entry reads **Open gate** or **Close gate** and is found on any edge of the gate: the whole gate moves together, however wide it is. Pointing at any of its edges is pointing at one gate.
 
-The portcullis takes {{n sprites.wall_stone_gate_2.wall.gate.swing seconds}} to rise or fall, drawn in three frames, shut, halfway, and raised, with the halfway frame held through the whole swing. The swing is only the picture: the gate is open or shut at once for bodies, light, and the dead. A raised gate is open like an open door: bodies, the dead included, pass across its whole width. A gate takes no [[Boards|boards]].
+The portcullis takes {{n sprites.wall_stone_gate_2.wall.gate.swing seconds}} to rise or fall (sped up on 2026-10-31: "Like 2-3x"), drawn in three frames, shut, halfway, and raised, with the halfway frame held through the whole swing. The swing is only the picture: the gate is open or shut at once for bodies, light, and the dead. A raised gate is open like an open door: bodies, the dead included, pass across its whole width. A gate takes no [[Boards|boards]].
 
 ### Shut
 
@@ -63,6 +63,8 @@ The Take apart tool (X) lights up the whole gate when any of its edges is under 
 
 The gate's frame is one picture as wide as its run, with the arch cut out of the stone, and each edge of the run draws its own slice of it, so a gate sorts, is drawn faint when it is a near wall of your room (a gate is an opening, drawn whole), and sits under an upper floor as the wall beside it does. The portcullis is drawn after the wall, a flat grille on its own plane, set back from the edge line. No corner post stands at the gate's ends or inside its arch: the gate and the stone wall beside it are one run.
 
+
+**The 1-wide gate and the stone arches** (Michael's ask of 2026-10-29: "a portcullis that is just 1 wide as well, like a tall arched door ... And also on each of the 1/2/3 wide openings minus the gate or gate functionality, it is just a stone arch"; built 2026-10-31). The **Stone gate (1 wide)** is a tall narrow arch on a single edge with its own narrow portcullis, built, opened, and broken as the wider gates are. The **Stone arches**, 1, 2, and 3 wide, are the gates' stone with no portcullis: always open, nothing to open or shut, never battered by the dead; a room with an arch in its wall is never sealed. All of them are in the build menu's Castle heading with Free building, at once and free, over plain stone wall.
 ## Numbers
 
 - Width: {{n sprites.wall_stone_gate_2.wall.gate.span}} tiles (Stone gate (2 wide)) or {{n sprites.wall_stone_gate_3.wall.gate.span}} tiles (Stone gate (3 wide)).
