@@ -16,7 +16,7 @@ summary: Cliff walls, cliff tops, cave mouths, and the stone ramp, built only wi
 With Free building on, the build palette (N) has a **Terrain** tab, and the cliff pieces are its Landforms (see [[Building]] and [[Terrain]]); before the Terrain tab they were rows on the one list:
 
 - **Cliff wall** and **Grassy cliff wall**: a cliff face on a tile's edge, built as any wall.
-- **Cave mouth** and **Grassy cave mouth**, each 1, 2, or 3 wide: a natural opening in a cliff (see [[#Caves|Caves]] below).
+- **Cave mouth** and **Grassy cave mouth**, each {{n sprites.wall_cliff_mouth_1.wall.gate.span}}, {{n sprites.wall_cliff_mouth_2.wall.gate.span}}, or {{n sprites.wall_cliff_mouth_3.wall.gate.span}} wide: a natural opening in a cliff (see [[#Caves|Caves]] below).
 - **Cliff top** and **Grassy cliff top**: a floor, laid a tile at a time or by a drag, on the ground or a storey up, as a [[Upper floors#Building floors and stairs|built floor]] is, never over a building's floor.
 - **Stone ramp**: a sloped slab of rock three tiles long climbing one storey, built as a stair, placed at once and for free, and bringing its own solid sides.
 
@@ -51,7 +51,7 @@ Nothing of a cliff is outlined.
 
 ### Caves
 
-A **cave** is a hill with a way in. A **cave mouth** is a natural opening in the rock, 1, 2, or 3 tiles wide, bare rock or grassy, carved from the cliff wall's own rock, so it runs on into the cliff beside it with no join and the cliff top over it meets it as it meets any cliff. Click its row, then a cliff wall: the mouth replaces that many cliff edges in a row at once, for free. It goes into any cliff, rock or grassy; it is refused over anything else ("Over a cliff wall"), over another mouth ("Already a cave mouth"), on an edge a corner piece draws ("Not at a cliff's corner"), or where something stands on the tiles either side of it, as a door is. Taken apart with Free building on, the cliff comes back. Without Free building it is not listed, and refused: "Cave mouths are not in the game yet".
+A **cave** is a hill with a way in. A **cave mouth** is a natural opening in the rock, {{n sprites.wall_cliff_mouth_1.wall.gate.span}}, {{n sprites.wall_cliff_mouth_2.wall.gate.span}}, or {{n sprites.wall_cliff_mouth_3.wall.gate.span}} tiles wide, bare rock or grassy, carved from the cliff wall's own rock, so it runs on into the cliff beside it with no join and the cliff top over it meets it as it meets any cliff. Click its row, then a cliff wall: the mouth replaces that many cliff edges in a row at once, for free. It goes into any cliff, rock or grassy; it is refused over anything else ("Over a cliff wall"), over another mouth ("Already a cave mouth"), on an edge a corner piece draws ("Not at a cliff's corner"), or where something stands on the tiles either side of it, as a door is. Taken apart with Free building on, the cliff comes back. Without Free building it is not listed, and refused: "Cave mouths are not in the game yet".
 
 A mouth is always open, like the stone arches (see [[Castle gates]]): nothing opens, shuts, boards, or batters it, so bodies, sight, light, and the dead pass through it. It closes the hollow behind it into a room, so a cave is a room under a hill's top.
 
@@ -78,7 +78,7 @@ Cliffs in the ordinary game, cliffs placed by the map, and a cliff-edged world a
 - A cliff wall: {{n sprites.wall_cliff.wall.height}} pixels tall, {{n sprites.wall_cliff.wall.thickness}} thick.
 - Cliff wall and Grassy cliff wall: {{n build.wall_cliff.cost.stone}} [[Stone|stone]] each, built at once.
 - Cliff top and Grassy cliff top: {{n build.floor_cliff_top.cost.stone}} stone a tile, built at once.
-- Cave mouths: 1, 2, or 3 tiles wide, placed at once with no cost, time, or tool.
+- Cave mouths: {{n sprites.wall_cliff_mouth_1.wall.gate.span}}, {{n sprites.wall_cliff_mouth_2.wall.gate.span}}, or {{n sprites.wall_cliff_mouth_3.wall.gate.span}} tiles wide, placed at once with no cost, time, or tool.
 - Stone ramp: placed at once, with no cost, time, or tool; three tiles, one storey. Its sides: {{n sprites.wall_ramp_side.wall.height}} pixels tall, {{n sprites.wall_ramp_side.wall.thickness}} thick.
 - The walls' and tops' costs are placeholders, copied from the stone pieces, never charged while cliffs are built only with Free building.
 
