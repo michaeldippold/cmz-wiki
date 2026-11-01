@@ -1,9 +1,9 @@
 {
  "version": {
-  "commit": "3654ecdf531009ee5889a12e75bcf435d4b4b268",
-  "short": "3654ecd",
-  "date": "2026-11-01T00:22:54-05:00",
-  "subject": "Merge pull request #627 from cmzgame/primary/caves",
+  "commit": "1ce6a220821d504c7227c41906cc8cd159abd9a7",
+  "short": "1ce6a22",
+  "date": "2026-11-01T01:30:50-05:00",
+  "subject": "Merge pull request #629 from cmzgame/primary/storey-blend",
   "ref": "origin/main"
  },
  "counts": {
@@ -11,7 +11,7 @@
   "recipes": 99,
   "interactions": 42,
   "lootTables": 29,
-  "sprites": 242,
+  "sprites": 243,
   "places": 50,
   "villagers": 9,
   "authoredDead": 62,
@@ -26,7 +26,7 @@
   "verbs": 31,
   "menuLabels": 110,
   "events": 38,
-  "checks": 97,
+  "checks": 98,
   "modules": 160
  },
  "items": [
@@ -7600,6 +7600,12 @@
    "note": "a dev box for the grindstone (docs/30 step 1; docs/29/09 has its art request); sharpens an edged weapon or tool for free on the item's repair count (docs/43 section 6, src/repair.js)"
   },
   {
+   "id": "ground_cliff_grass",
+   "kind": "other",
+   "drawn": true,
+   "note": "the grassy cliff top's turf (art round 14c, wired with the storey blend, Michael 2026-11-01): the ground's own grass with rock showing through in patches, the turf's cut edge, a rock nub and a tuft now and then; a seamless 256 x 128 world texture, the storey-only blended kind `cliff_grass` of data/ground.json"
+  },
+  {
    "id": "ground_cliff_top",
    "kind": "other",
    "drawn": true,
@@ -12831,6 +12837,7 @@
   "slots",
   "smalltext",
   "sound",
+  "storeyblend",
   "storeys",
   "sway",
   "sync",
@@ -12851,7 +12858,7 @@
  "modules": [
   {
    "path": "map.js",
-   "lines": 4518
+   "lines": 4522
   },
   {
    "path": "interact.js",
@@ -12895,7 +12902,11 @@
   },
   {
    "path": "ground.js",
-   "lines": 1035
+   "lines": 1056
+  },
+  {
+   "path": "render/storeys.js",
+   "lines": 1022
   },
   {
    "path": "entities/animal.js",
@@ -12904,10 +12915,6 @@
   {
    "path": "game.js",
    "lines": 970
-  },
-  {
-   "path": "render/storeys.js",
-   "lines": 881
   },
   {
    "path": "ui/inventory-panel.js",

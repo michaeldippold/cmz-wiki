@@ -9,6 +9,10 @@ numbersOk: true
 
 Each time the wiki is synced with the game, an entry goes here, newest first, with the pages it touched. The game itself is in development; its own decision log is `docs/02-decisions.md` in the game's repository.
 
+## 2026-11-01: synced to `1ce6a22`
+
+- **New in the game:** a hill's tops a storey up blend: the bare cliff top is big rock slabs, the grassy one turf with rock through it, and the rock spreads raggedly into the turf; laid floors stay hard (game #629, art round 14c). [[Cliffs]] updated; the [[Playtest checklist]] has its entry.
+
 ## 2026-11-01: synced to `3654ecd`
 
 - **New in the game:** caves: cave mouths 1, 2, and 3 wide, rock and grassy, opened in a hill's face; the cliff top laid on the ground blends into the grass; from inside a cave its walls face in and the hill in the way is cut to a stub (game #627, art rounds 14c and 14d). [[Cliffs]] and [[Terrain]] updated; the [[Playtest checklist]] has its entry.

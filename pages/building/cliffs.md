@@ -49,6 +49,10 @@ The walls are drawn by where the plateau is:
 
 Nothing of a cliff is outlined.
 
+### A hill's top
+
+A storey up, the **Cliff top** is bare rock in big cracked slabs and the **Grassy cliff top** is turf with rock showing through in patches, each drawn as one picture over the hill, not tile by tile. Where they meet, the rock spreads raggedly into the turf with a darker edge, as dirt meets grass on the ground, and a lone rock tile in the turf rounds its corners off. A floor laid there (planks, cut stone) stays a hard-edged tile, and the top still ends square at the hill's edge, where the cliff's rounded lip carries the edge.
+
 ### Caves
 
 A **cave** is a hill with a way in. A **cave mouth** is a natural opening in the rock, {{n sprites.wall_cliff_mouth_1.wall.gate.span}}, {{n sprites.wall_cliff_mouth_2.wall.gate.span}}, or {{n sprites.wall_cliff_mouth_3.wall.gate.span}} tiles wide, bare rock or grassy, carved from the cliff wall's own rock, so it runs on into the cliff beside it with no join and the cliff top over it meets it as it meets any cliff. Click its row, then a cliff wall: the mouth replaces that many cliff edges in a row at once, for free. It goes into any cliff, rock or grassy; it is refused over anything else ("Over a cliff wall"), over another mouth ("Already a cave mouth"), on an edge a corner piece draws ("Not at a cliff's corner"), or where something stands on the tiles either side of it, as a door is. Taken apart with Free building on, the cliff comes back. Without Free building it is not listed, and refused: "Cave mouths are not in the game yet".
@@ -57,7 +61,7 @@ A mouth is always open, like the stone arches (see [[Castle gates]]): nothing op
 
 **From inside a cave you see it whole.** Standing in a cave, its roof (the hill's top over it) is not drawn, its walls show their rock faces into it with rounded coves at the far corners, its near walls, corners, and mouth are cut down to a stub at their foot, and any cliff between you and the camera is cut the same way. The hill's top tiles that would cover you are not drawn either; the rest of the hill stays. Outside, a hill hides nothing and is never cut.
 
-**The cave's floor.** The **Cliff top** laid on the ground is bare rock that blends with the grass and dirt round it, its edge ragged, like a path, so a cave's floor spills out of its mouth (see [[Terrain]]). A floor of laid stone stays a hard-edged tile. A storey up, the cliff top is laid tile by tile as before.
+**The cave's floor.** The **Cliff top** laid on the ground is bare rock that blends with the grass and dirt round it, its edge ragged, like a path, so a cave's floor spills out of its mouth (see [[Terrain]]). A floor of laid stone stays a hard-edged tile. A storey up, a hill's tops blend too (below).
 
 ### The stone ramp
 
@@ -99,6 +103,7 @@ A guest builds cliff walls, cliff tops, cave mouths, and the ramp through the sa
 ## Sources
 
 <!-- sources at e5ab36c -->
+- `src/render/storeys.js` (`blendStorey`, `floorSig`), `src/ground.js` (`storeyKindOf`, `edgeNoiseAt`), `data/ground.json` (`cliff_grass`, `storeyOnly`), `data/sprites/ground_cliff_grass.json`: a hill's tops a storey up blended, rock into turf, laid floors hard (game #629, at 1ce6a22)
 - `data/build.json` (the six `mouth_*` entries), `data/sprites/wall_cliff_mouth_*.json`, `data/sprites/wall_cliff_grass_mouth_*.json` (`wall.cliff`, `gate.always` open, `gate.over`), `src/map.js` (`gateProblem`, `canBuildWall`'s `stamp`), `src/placement.js` (`gateBlock`'s words): cave mouths built into a cliff, always open, their refusals (game #627, at 3654ecd)
 - `src/cliffs.js` (`setInside`), `src/render/storeys.js` (`hiderFor`'s `cave`), `src/render/walls.js` (`isNearWall`, `makeCliffCorner`'s stub, `isMouth`, `cliffClip`), `src/render/scene.js`: the view from inside a cave (game #627, at 3654ecd)
 - `data/ground.json` (`floor_cliff_top` the `cliff_top` kind): the cliff top blends on the ground (game #627, at 3654ecd)
