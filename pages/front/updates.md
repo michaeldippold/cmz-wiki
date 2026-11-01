@@ -9,6 +9,10 @@ numbersOk: true
 
 Each time the wiki is synced with the game, an entry goes here, newest first, with the pages it touched. The game itself is in development; its own decision log is `docs/02-decisions.md` in the game's repository.
 
+## 2026-11-01: synced to `3654ecd`
+
+- **New in the game:** caves: cave mouths 1, 2, and 3 wide, rock and grassy, opened in a hill's face; the cliff top laid on the ground blends into the grass; from inside a cave its walls face in and the hill in the way is cut to a stub (game #627, art rounds 14c and 14d). [[Cliffs]] and [[Terrain]] updated; the [[Playtest checklist]] has its entry.
+
 ## 2026-10-31: synced to `863aaf1`
 
 - **New in the game:** shallow water is a blended ground with a waterline and a wet bank, deep water inside it, lily pads, and water plants at the shore (game #624, art round 14b). [[Water]] and [[Terrain]] updated.

@@ -1,9 +1,9 @@
 {
  "version": {
-  "commit": "863aaf1a0609e65432bdf46fe27c5cba42b3df50",
-  "short": "863aaf1",
-  "date": "2026-10-31T22:42:38-05:00",
-  "subject": "Merge #625: Frogs on the shallows and a wader's ripples (art round 14b)",
+  "commit": "3654ecdf531009ee5889a12e75bcf435d4b4b268",
+  "short": "3654ecd",
+  "date": "2026-11-01T00:22:54-05:00",
+  "subject": "Merge pull request #627 from cmzgame/primary/caves",
   "ref": "origin/main"
  },
  "counts": {
@@ -11,7 +11,7 @@
   "recipes": 99,
   "interactions": 42,
   "lootTables": 29,
-  "sprites": 235,
+  "sprites": 242,
   "places": 50,
   "villagers": 9,
   "authoredDead": 62,
@@ -7600,6 +7600,12 @@
    "note": "a dev box for the grindstone (docs/30 step 1; docs/29/09 has its art request); sharpens an edged weapon or tool for free on the item's repair count (docs/43 section 6, src/repair.js)"
   },
   {
+   "id": "ground_cliff_top",
+   "kind": "other",
+   "drawn": true,
+   "note": "the bare cliff floor's rock (art round 14c, wired with the caves, Michael 2026-10-31): round 10's rock in big tilted slabs parted by wandering fissures, pits, scree, lichen; a seamless 256 x 128 world texture, the blended kind `cliff_top` of data/ground.json"
+  },
+  {
    "id": "ground_cobble",
    "kind": "placeholder box",
    "drawn": false
@@ -8714,6 +8720,42 @@
    "kind": "wall",
    "drawn": true,
    "note": "a cliff's corner pieces (art round 10): each one picture of the two edges that meet at a vertex, the rock rounding round the corner (an outer corner radius 20 at the face, an inner corner a cove of radius 12), anchored on the vertex itself at ground level (as a post: no +16). Drawn in place of both edges' own pictures and the post. `edges` names the two edges each owns, from the vertex (vx, vy). Where two corners share an edge (a step one tile long) each takes its halved picture for that edge (`halves`), cut square at the edge's midpoint, and the two halves meet there; no cut at run time."
+  },
+  {
+   "id": "wall_cliff_grass_mouth_1",
+   "kind": "wall",
+   "drawn": true,
+   "note": "art round 14d (approved by Michael 2026-10-31): a cave mouth 1 tile wide, a natural opening carved through the cliff wall's own rock (tools/art-gen/round14d, on round 10's generator), the brow over it jutting a little; a gate that is `always: \"open\"` as the stone arches are, stamped over a cliff run; `wall.cliff` so it is drawn and cut as the cliff is. The frames are named north_gate / west_gate so render/walls.js gateSlice cuts them"
+  },
+  {
+   "id": "wall_cliff_grass_mouth_2",
+   "kind": "wall",
+   "drawn": true,
+   "note": "art round 14d (approved by Michael 2026-10-31): a cave mouth 2 tiles wide, a natural opening carved through the cliff wall's own rock (tools/art-gen/round14d, on round 10's generator), the brow over it jutting a little; a gate that is `always: \"open\"` as the stone arches are, stamped over a cliff run; `wall.cliff` so it is drawn and cut as the cliff is. The frames are named north_gate / west_gate so render/walls.js gateSlice cuts them"
+  },
+  {
+   "id": "wall_cliff_grass_mouth_3",
+   "kind": "wall",
+   "drawn": true,
+   "note": "art round 14d (approved by Michael 2026-10-31): a cave mouth 3 tiles wide, a natural opening carved through the cliff wall's own rock (tools/art-gen/round14d, on round 10's generator), the brow over it jutting a little; a gate that is `always: \"open\"` as the stone arches are, stamped over a cliff run; `wall.cliff` so it is drawn and cut as the cliff is. The frames are named north_gate / west_gate so render/walls.js gateSlice cuts them"
+  },
+  {
+   "id": "wall_cliff_mouth_1",
+   "kind": "wall",
+   "drawn": true,
+   "note": "art round 14d (approved by Michael 2026-10-31): a cave mouth 1 tile wide, a natural opening carved through the cliff wall's own rock (tools/art-gen/round14d, on round 10's generator), the brow over it jutting a little; a gate that is `always: \"open\"` as the stone arches are, stamped over a cliff run; `wall.cliff` so it is drawn and cut as the cliff is. The frames are named north_gate / west_gate so render/walls.js gateSlice cuts them"
+  },
+  {
+   "id": "wall_cliff_mouth_2",
+   "kind": "wall",
+   "drawn": true,
+   "note": "art round 14d (approved by Michael 2026-10-31): a cave mouth 2 tiles wide, a natural opening carved through the cliff wall's own rock (tools/art-gen/round14d, on round 10's generator), the brow over it jutting a little; a gate that is `always: \"open\"` as the stone arches are, stamped over a cliff run; `wall.cliff` so it is drawn and cut as the cliff is. The frames are named north_gate / west_gate so render/walls.js gateSlice cuts them"
+  },
+  {
+   "id": "wall_cliff_mouth_3",
+   "kind": "wall",
+   "drawn": true,
+   "note": "art round 14d (approved by Michael 2026-10-31): a cave mouth 3 tiles wide, a natural opening carved through the cliff wall's own rock (tools/art-gen/round14d, on round 10's generator), the brow over it jutting a little; a gate that is `always: \"open\"` as the stone arches are, stamped over a cliff run; `wall.cliff` so it is drawn and cut as the cliff is. The frames are named north_gate / west_gate so render/walls.js gateSlice cuts them"
   },
   {
    "id": "wall_daub",
@@ -10882,6 +10924,66 @@
    "group": "Landforms",
    "note": "as the Cliff wall, its turf rolled over the lip (art round 10)"
   },
+  "mouth_cliff_1": {
+   "label": "Cave mouth (1 wide)",
+   "kind": "gate",
+   "sprite": "wall_cliff_mouth_1",
+   "dev": true,
+   "tab": "terrain",
+   "group": "Landforms",
+   "hint": "Click, then click a cliff wall: a 1-tile cave mouth opens in it at once",
+   "note": "art round 14d (Michael, 2026-10-31: \"we need a way to make a cave\"): a natural opening stamped over 1 cliff wall edge(s) in a row, always open (the gate's `always`), placed at once and free with Free building; taking it apart puts the cliff wall back"
+  },
+  "mouth_cliff_2": {
+   "label": "Cave mouth (2 wide)",
+   "kind": "gate",
+   "sprite": "wall_cliff_mouth_2",
+   "dev": true,
+   "tab": "terrain",
+   "group": "Landforms",
+   "hint": "Click, then click a cliff wall: a 2-tile cave mouth opens in it at once",
+   "note": "art round 14d (Michael, 2026-10-31: \"we need a way to make a cave\"): a natural opening stamped over 2 cliff wall edge(s) in a row, always open (the gate's `always`), placed at once and free with Free building; taking it apart puts the cliff wall back"
+  },
+  "mouth_cliff_3": {
+   "label": "Cave mouth (3 wide)",
+   "kind": "gate",
+   "sprite": "wall_cliff_mouth_3",
+   "dev": true,
+   "tab": "terrain",
+   "group": "Landforms",
+   "hint": "Click, then click a cliff wall: a 3-tile cave mouth opens in it at once",
+   "note": "art round 14d (Michael, 2026-10-31: \"we need a way to make a cave\"): a natural opening stamped over 3 cliff wall edge(s) in a row, always open (the gate's `always`), placed at once and free with Free building; taking it apart puts the cliff wall back"
+  },
+  "mouth_cliff_grass_1": {
+   "label": "Grassy cave mouth (1 wide)",
+   "kind": "gate",
+   "sprite": "wall_cliff_grass_mouth_1",
+   "dev": true,
+   "tab": "terrain",
+   "group": "Landforms",
+   "hint": "Click, then click a cliff wall: a 1-tile cave mouth opens in it at once",
+   "note": "art round 14d (Michael, 2026-10-31: \"we need a way to make a cave\"): a natural opening stamped over 1 cliff wall edge(s) in a row, always open (the gate's `always`), placed at once and free with Free building; taking it apart puts the cliff wall back"
+  },
+  "mouth_cliff_grass_2": {
+   "label": "Grassy cave mouth (2 wide)",
+   "kind": "gate",
+   "sprite": "wall_cliff_grass_mouth_2",
+   "dev": true,
+   "tab": "terrain",
+   "group": "Landforms",
+   "hint": "Click, then click a cliff wall: a 2-tile cave mouth opens in it at once",
+   "note": "art round 14d (Michael, 2026-10-31: \"we need a way to make a cave\"): a natural opening stamped over 2 cliff wall edge(s) in a row, always open (the gate's `always`), placed at once and free with Free building; taking it apart puts the cliff wall back"
+  },
+  "mouth_cliff_grass_3": {
+   "label": "Grassy cave mouth (3 wide)",
+   "kind": "gate",
+   "sprite": "wall_cliff_grass_mouth_3",
+   "dev": true,
+   "tab": "terrain",
+   "group": "Landforms",
+   "hint": "Click, then click a cliff wall: a 3-tile cave mouth opens in it at once",
+   "note": "art round 14d (Michael, 2026-10-31: \"we need a way to make a cave\"): a natural opening stamped over 3 cliff wall edge(s) in a row, always open (the gate's `always`), placed at once and free with Free building; taking it apart puts the cliff wall back"
+  },
   "floor_cliff_top": {
    "label": "Cliff top",
    "kind": "floor",
@@ -11350,9 +11452,9 @@
   {
    "key": "KeyR",
    "at": [
-    "placement.js:1183",
-    "placement.js:1194",
-    "placement.js:1198"
+    "placement.js:1187",
+    "placement.js:1198",
+    "placement.js:1202"
    ]
   },
   {
@@ -11661,7 +11763,7 @@
    "key": "Build",
    "at": [
     "main.js:974",
-    "placement.js:90"
+    "placement.js:91"
    ]
   },
   {
@@ -11673,25 +11775,25 @@
   {
    "key": "Click to hang the painting · Esc cancel",
    "at": [
-    "placement.js:2198"
+    "placement.js:2202"
    ]
   },
   {
    "key": "Click to lay the rug · R turn · Esc cancel",
    "at": [
-    "placement.js:2191"
+    "placement.js:2195"
    ]
   },
   {
    "key": "Click to place · Esc cancel",
    "at": [
-    "placement.js:2234"
+    "placement.js:2238"
    ]
   },
   {
    "key": "Click to put the torch on the wall · Esc cancel",
    "at": [
-    "placement.js:1667"
+    "placement.js:1671"
    ]
   },
   {
@@ -12030,7 +12132,7 @@
   {
    "key": "Terrain",
    "at": [
-    "placement.js:90"
+    "placement.js:91"
    ]
   },
   {
@@ -12122,7 +12224,7 @@
   {
    "key": "${size} · click to take it up",
    "at": [
-    "placement.js:2218"
+    "placement.js:2222"
    ]
   },
   {
@@ -12152,54 +12254,54 @@
   {
    "key": "Building ${d.label.replace(/ \\(.*\\)$/, \"\").toLowerCase()}",
    "at": [
-    "placement.js:217"
+    "placement.js:218"
    ]
   },
   {
    "key": "Building ${d.label.toLowerCase()}",
    "at": [
-    "placement.js:601",
-    "placement.js:652",
-    "placement.js:719",
-    "placement.js:2119",
-    "placement.js:2156"
+    "placement.js:602",
+    "placement.js:653",
+    "placement.js:723",
+    "placement.js:2123",
+    "placement.js:2160"
    ]
   },
   {
    "key": "Click to build (${costText(g.wallKind)})${wood} · Esc cancel",
    "at": [
-    "placement.js:2251"
+    "placement.js:2255"
    ]
   },
   {
    "key": "Click to build (${costText(g.what)}) · Esc cancel",
    "at": [
-    "placement.js:2230",
-    "placement.js:2235"
+    "placement.js:2234",
+    "placement.js:2239"
    ]
   },
   {
    "key": "Click to build (${costText(what)}) · Esc cancel",
    "at": [
-    "placement.js:1688"
+    "placement.js:1692"
    ]
   },
   {
    "key": "Click to build ${g.n} across (${costText(g.wallKind)}) · Esc cancel",
    "at": [
-    "placement.js:2246"
+    "placement.js:2250"
    ]
   },
   {
-   "key": "Click to place the ${arch ? \"arch\" : \"gate\"} at once · Esc cancel",
+   "key": "Click to place the ${gk === \"mouth\" ? \"cave mouth\" : gk === \"arch\" ? \"arch\" : \"gate\"} at once · Esc cancel",
    "at": [
-    "placement.js:2241"
+    "placement.js:2245"
    ]
   },
   {
    "key": "Click to take apart ${targetName(t)}${back.length ? ",
    "at": [
-    "placement.js:2212"
+    "placement.js:2216"
    ]
   },
   {
@@ -12229,7 +12331,7 @@
   {
    "key": "Laying ${d.label.toLowerCase()}",
    "at": [
-    "placement.js:469"
+    "placement.js:470"
    ]
   },
   {
@@ -12261,7 +12363,7 @@
   {
    "key": "Painting ${d.label.toLowerCase()}",
    "at": [
-    "placement.js:524"
+    "placement.js:525"
    ]
   },
   {
@@ -12366,7 +12468,7 @@
   {
    "key": "containerGone",
    "at": [
-    "placement.js:1590"
+    "placement.js:1594"
    ]
   },
   {
@@ -12414,7 +12516,7 @@
   {
    "key": "fenceBurst",
    "at": [
-    "map.js:2078"
+    "map.js:2081"
    ]
   },
   {
@@ -12543,7 +12645,7 @@
    "key": "wallStruck",
    "at": [
     "entities/zombie.js:941",
-    "map.js:2074"
+    "map.js:2077"
    ]
   },
   {
@@ -12749,7 +12851,7 @@
  "modules": [
   {
    "path": "map.js",
-   "lines": 4515
+   "lines": 4518
   },
   {
    "path": "interact.js",
@@ -12761,7 +12863,7 @@
   },
   {
    "path": "placement.js",
-   "lines": 2253
+   "lines": 2257
   },
   {
    "path": "net.js",
@@ -12777,7 +12879,7 @@
   },
   {
    "path": "render/walls.js",
-   "lines": 1329
+   "lines": 1339
   },
   {
    "path": "ui/screens.js",
@@ -12805,7 +12907,7 @@
   },
   {
    "path": "render/storeys.js",
-   "lines": 876
+   "lines": 881
   },
   {
    "path": "ui/inventory-panel.js",
@@ -12861,7 +12963,7 @@
   },
   {
    "path": "render/scene.js",
-   "lines": 425
+   "lines": 428
   },
   {
    "path": "ui/map-panel.js",
@@ -13112,6 +13214,10 @@
    "lines": 124
   },
   {
+   "path": "cliffs.js",
+   "lines": 123
+  },
+  {
    "path": "ui/inspect-card.js",
    "lines": 123
   },
@@ -13162,10 +13268,6 @@
   {
    "path": "entities/ladders.js",
    "lines": 97
-  },
-  {
-   "path": "cliffs.js",
-   "lines": 95
   },
   {
    "path": "ui/zombie-bars.js",

@@ -1,11 +1,11 @@
 ---
 title: Cliffs
 categories: [Building, Mechanics]
-aliases: [Cliff, Cliff wall, Grassy cliff wall, Cliff top, Grassy cliff top, Stone ramp, Ramp, Hill, Hills, Plateau]
-summary: Cliff walls, cliff tops, and the stone ramp, built only with Free building for experimenting: a hill made of a ring of cliff walls with a floor laid over it a storey up, climbed by a ramp.
+aliases: [Cliff, Cliff wall, Grassy cliff wall, Cliff top, Grassy cliff top, Stone ramp, Ramp, Hill, Hills, Plateau, Cave, Caves, Cave mouth, Grassy cave mouth]
+summary: Cliff walls, cliff tops, cave mouths, and the stone ramp, built only with Free building for experimenting: a hill made of a ring of cliff walls with a floor laid over it a storey up, climbed by a ramp, hollowed into a cave by a mouth in its face.
 ---
 
-{{devonly note="Cliffs are not in the game yet: their five rows are listed in the build palette only while Free building is on, for experimenting with Michael's cliff art (art round 10)."}}
+{{devonly note="Cliffs are not in the game yet: their rows are listed in the build palette only while Free building is on, for experimenting with Michael's cliff art (art rounds 10 and 14d)."}}
 
 **Cliffs** are rock faces a storey tall, built with **Free building** on to try out hills. A hill is made of three pieces: **cliff walls** standing on the tile edges round it, a **cliff top** laid a storey up over the tiles inside them, and a **stone ramp** that climbs onto it. Each comes bare (rock) or grassy (turf rolled over the lip). Nothing on the map is a cliff yet; the plan for a bounded world with cliffs at its edge (the game's `docs/29-world/10`) is not built.
 
@@ -13,9 +13,10 @@ summary: Cliff walls, cliff tops, and the stone ramp, built only with Free build
 
 ### The pieces
 
-With Free building on, the build palette (N) has a **Terrain** tab, and the five cliff pieces are its Landforms (see [[Building]] and [[Terrain]]); before the Terrain tab they were rows on the one list:
+With Free building on, the build palette (N) has a **Terrain** tab, and the cliff pieces are its Landforms (see [[Building]] and [[Terrain]]); before the Terrain tab they were rows on the one list:
 
 - **Cliff wall** and **Grassy cliff wall**: a cliff face on a tile's edge, built as any wall.
+- **Cave mouth** and **Grassy cave mouth**, each 1, 2, or 3 wide: a natural opening in a cliff (see [[#Caves|Caves]] below).
 - **Cliff top** and **Grassy cliff top**: a floor, laid a tile at a time or by a drag, on the ground or a storey up, as a [[Upper floors#Building floors and stairs|built floor]] is, never over a building's floor.
 - **Stone ramp**: a sloped slab of rock three tiles long climbing one storey, built as a stair, placed at once and for free, and bringing its own solid sides.
 
@@ -48,6 +49,16 @@ The walls are drawn by where the plateau is:
 
 Nothing of a cliff is outlined.
 
+### Caves
+
+A **cave** is a hill with a way in. A **cave mouth** is a natural opening in the rock, 1, 2, or 3 tiles wide, bare rock or grassy, carved from the cliff wall's own rock, so it runs on into the cliff beside it with no join and the cliff top over it meets it as it meets any cliff. Click its row, then a cliff wall: the mouth replaces that many cliff edges in a row at once, for free. It goes into any cliff, rock or grassy; it is refused over anything else ("Over a cliff wall"), over another mouth ("Already a cave mouth"), on an edge a corner piece draws ("Not at a cliff's corner"), or where something stands on the tiles either side of it, as a door is. Taken apart with Free building on, the cliff comes back. Without Free building it is not listed, and refused: "Cave mouths are not in the game yet".
+
+A mouth is always open, like the stone arches (see [[Castle gates]]): nothing opens, shuts, boards, or batters it, so bodies, sight, light, and the dead pass through it. It closes the hollow behind it into a room, so a cave is a room under a hill's top.
+
+**From inside a cave you see it whole.** Standing in a cave, its roof (the hill's top over it) is not drawn, its walls show their rock faces into it with rounded coves at the far corners, its near walls, corners, and mouth are cut down to a stub at their foot, and any cliff between you and the camera is cut the same way. The hill's top tiles that would cover you are not drawn either; the rest of the hill stays. Outside, a hill hides nothing and is never cut.
+
+**The cave's floor.** The **Cliff top** laid on the ground is bare rock that blends with the grass and dirt round it, its edge ragged, like a path, so a cave's floor spills out of its mouth (see [[Terrain]]). A floor of laid stone stays a hard-edged tile. A storey up, the cliff top is laid tile by tile as before.
+
 ### The stone ramp
 
 A stone ramp is a stair of rock: it is checked as a [[Upper floors#Stairs|stair]] is, by the same rules and refusals, three tiles from the cursor climbing one storey, north or west only ("Stairs climb away from the camera"). It has no treads: a body walks up it on a smooth slope, rising evenly from its foot to its top, and crosses its top edge onto the landing. Building it lays its landing as a cliff top, unless a floor is laid there already. Like every stair, it is never taken apart.
@@ -67,16 +78,17 @@ Cliffs in the ordinary game, cliffs placed by the map, and a cliff-edged world a
 - A cliff wall: {{n sprites.wall_cliff.wall.height}} pixels tall, {{n sprites.wall_cliff.wall.thickness}} thick.
 - Cliff wall and Grassy cliff wall: {{n build.wall_cliff.cost.stone}} [[Stone|stone]] each, built at once.
 - Cliff top and Grassy cliff top: {{n build.floor_cliff_top.cost.stone}} stone a tile, built at once.
+- Cave mouths: 1, 2, or 3 tiles wide, placed at once with no cost, time, or tool.
 - Stone ramp: placed at once, with no cost, time, or tool; three tiles, one storey. Its sides: {{n sprites.wall_ramp_side.wall.height}} pixels tall, {{n sprites.wall_ramp_side.wall.thickness}} thick.
 - The walls' and tops' costs are placeholders, copied from the stone pieces, never charged while cliffs are built only with Free building.
 
 ## With friends
 
-A guest builds cliff walls, cliff tops, and the ramp through the same build command as the host, and the host checks them by the same rules (a guest's ramp goes up at once too, with its sides); without Free building the host refuses them. A guest walks up a ramp with their own keys, and their game reckons the slope as the host's does. Cliffs, their tops, and the ramp with its sides travel in the map's chunks as walls, floors, and stairs do, so every player draws the same corners and faces, and they are kept in the save.
+A guest builds cliff walls, cliff tops, cave mouths, and the ramp through the same build command as the host, and the host checks them by the same rules (a guest's ramp goes up at once too, with its sides); without Free building the host refuses them. A guest walks up a ramp with their own keys, and their game reckons the slope as the host's does. Cliffs, their tops, cave mouths, and the ramp with its sides travel in the map's chunks as walls, floors, and stairs do, and each player's own screen draws a cave from inside when that player stands in it, so every player draws the same corners and faces, and they are kept in the save.
 
 ## Settings that change it
 
-- **Free building** (default Off): offers the Terrain tab, and lists the five cliff pieces on it, and lets them be built, and lets a cliff wall be taken apart. See [[World rules]].
+- **Free building** (default Off): offers the Terrain tab, and lists the cliff pieces and cave mouths on it, and lets them be built, and lets a cliff wall be taken apart. See [[World rules]].
 
 ## See also
 
@@ -87,6 +99,9 @@ A guest builds cliff walls, cliff tops, and the ramp through the same build comm
 ## Sources
 
 <!-- sources at e5ab36c -->
+- `data/build.json` (the six `mouth_*` entries), `data/sprites/wall_cliff_mouth_*.json`, `data/sprites/wall_cliff_grass_mouth_*.json` (`wall.cliff`, `gate.always` open, `gate.over`), `src/map.js` (`gateProblem`, `canBuildWall`'s `stamp`), `src/placement.js` (`gateBlock`'s words): cave mouths built into a cliff, always open, their refusals (game #627, at 3654ecd)
+- `src/cliffs.js` (`setInside`), `src/render/storeys.js` (`hiderFor`'s `cave`), `src/render/walls.js` (`isNearWall`, `makeCliffCorner`'s stub, `isMouth`, `cliffClip`), `src/render/scene.js`: the view from inside a cave (game #627, at 3654ecd)
+- `data/ground.json` (`floor_cliff_top` the `cliff_top` kind): the cliff top blends on the ground (game #627, at 3654ecd)
 - `data/build.json` (at c0448ec): the five cliff pieces carry `tab` terrain and `group` Landforms; the Terrain tab is offered only with Free building (game #565)
 - `data/build.json:209-270`: the Cliff wall, the Grassy cliff wall, the Cliff top, the Grassy cliff top, and the Stone ramp, each `dev`, its cost a placeholder, its seconds (game #561)
 - `data/sprites/wall_cliff.json`, `data/sprites/wall_cliff_grass.json`: `wall.cliff`, the height and thickness, the corner pieces' definition, the face variants and the backs (game #561)

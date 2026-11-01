@@ -18,7 +18,7 @@ An entry of the build menu says which tab it is on, and the menu shows the tab b
 Each tab lists its rows under small headings:
 
 - **Build:** Walls and openings, Props, Floors and stairs, and, with Free building on, Castle (the two [[Castle gates]]).
-- **Terrain:** **Ground** (Grass, Dirt, Cobblestone, Random spawn), **Water** (Shallow water, Water), and **Landforms** (the Cliff wall, Grassy cliff wall, Cliff top, Grassy cliff top, and Stone ramp; see [[Cliffs]]).
+- **Terrain:** **Ground** (Grass, Dirt, Cobblestone, Random spawn), **Water** (Shallow water, Water), and **Landforms** (the Cliff wall, Grassy cliff wall, the Cave mouths and Grassy cave mouths 1, 2, and 3 wide, Cliff top, Grassy cliff top, and Stone ramp; see [[Cliffs]]).
 
 A terrain row shows its floor's colour, a small diamond, where a building row shows its cost. The five landforms are built as they were before they moved to this tab, but for the Stone ramp, which is placed at once and for free like the ground's paints (see [[Cliffs#The stone ramp|Cliffs]]).
 
@@ -32,7 +32,7 @@ Pick a terrain row, press the mouse at one corner, drag, and let go at the other
 
 Painting is **instant**, costs **nothing**, and asks for no tool. It works on the **ground only**: upstairs, "Terrain is the ground's". It replaces the tile's floor outright, as tilling does, and nothing is kept: no record that a player built it, so there is nothing to take apart, and the Take apart tool does not light a painted tile. To change a tile again, paint it over. Without Free building every tile is refused, "Terrain is not in the game yet".
 
-A painted tile is a floor of the map like any other. It blends into its neighbours as an authored one does: dirt and cobblestone meet grass with a ragged, pixel-crisp edge, water meets grass and dirt with a ragged dirt shore as the valley's river does, shallow water meets them with a ragged edge, a pale waterline, and a wet dark bank, and holds deep water inside it (see [[Water]]), and the pink tile is a hard-edged diamond.
+A painted tile is a floor of the map like any other. It blends into its neighbours as an authored one does: dirt and cobblestone meet grass with a ragged, pixel-crisp edge, water meets grass and dirt with a ragged dirt shore as the valley's river does, shallow water meets them with a ragged edge, a pale waterline, and a wet dark bank, and holds deep water inside it (see [[Water]]), and the pink tile is a hard-edged diamond. A **Cliff top** laid on the ground (a Landform, see [[Cliffs]]) is bare rock that blends the same way, its edge ragged into the grass and dirt, so a cave's floor spills out of its mouth; a laid stone floor stays a hard diamond.
 
 ### What a tile can be painted
 
@@ -80,6 +80,7 @@ A guest paints through the same build command as the host's player does, naming 
 ## Sources
 
 <!-- sources at 5257b92 -->
+- `data/ground.json` (`floor_cliff_top` the `cliff_top` kind, `ground_cliff_top`): the cliff top laid on the ground blends (game #627, at 3654ecd)
 - `data/ground.json` (the `shallow` terrain kind), `src/ground.js`: painted shallow water blends with a waterline and a wet bank, deep water inside it (game #624, at 863aaf1)
 - `data/build.json`: each entry's `tab` and `group`; the six `terrain_*` entries (`kind` terrain, `dev`, `seconds` 0, `reach` 12, `already`) and the landforms moved to the Terrain tab (game #565)
 - `src/placement.js:81-97`, `src/placement.js:255-296`: the tabs and which are on offer; `isTerrainBuild`, `TERRAIN_DRAG`, `terrainPlan`: the drag, the reach, the refusals in order, "Terrain is not in the game yet", "Terrain is the ground's" (game #565)
