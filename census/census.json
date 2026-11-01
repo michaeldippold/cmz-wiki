@@ -1,9 +1,9 @@
 {
  "version": {
-  "commit": "5114c2f462dadf956a8bd2167fcca3709e5d96b0",
-  "short": "5114c2f",
-  "date": "2026-10-31T15:49:40-05:00",
-  "subject": "Merge #623: The 1-wide gate and the stone arches (art round 14a)",
+  "commit": "863aaf1a0609e65432bdf46fe27c5cba42b3df50",
+  "short": "863aaf1",
+  "date": "2026-10-31T22:42:38-05:00",
+  "subject": "Merge #625: Frogs on the shallows and a wader's ripples (art round 14b)",
   "ref": "origin/main"
  },
  "counts": {
@@ -11,7 +11,7 @@
   "recipes": 99,
   "interactions": 42,
   "lootTables": 29,
-  "sprites": 231,
+  "sprites": 235,
   "places": 50,
   "villagers": 9,
   "authoredDead": 62,
@@ -27,7 +27,7 @@
   "menuLabels": 110,
   "events": 38,
   "checks": 97,
-  "modules": 159
+  "modules": 160
  },
  "items": [
   {
@@ -7254,6 +7254,12 @@
    "note": "the dev crate (docs/52 section 6): a one-tile cube 32 px tall, the measuring stick of the 96 px walls (three stack to the cap, two to the door's top); placed by check(\"build\") alone, never on a map"
   },
   {
+   "id": "critter_frog",
+   "kind": "other",
+   "drawn": true,
+   "note": "a frog (art round 14b): cosmetic, appears on shallow water and hops a tile at a time; the engine moves the anchor along the hop by `along`, the frames carry the arc Approved by Michael 2026-10-31; drawn by render/frogs.js."
+  },
+  {
    "id": "crop_cabbage_0",
    "kind": "crop",
    "drawn": true,
@@ -7580,6 +7586,12 @@
    "note": "a dev box for the forge (docs/30 step 1; docs/29/09 has its art request)"
   },
   {
+   "id": "frog_splash",
+   "kind": "other",
+   "drawn": true,
+   "note": "flat on the water, under the frog Approved by Michael 2026-10-31; drawn by render/frogs.js."
+  },
+  {
    "id": "grindstone",
    "kind": "placeholder box",
    "label": "Grindstone",
@@ -7601,6 +7613,12 @@
    "id": "ground_noise",
    "kind": "placeholder box",
    "drawn": false
+  },
+  {
+   "id": "ground_shallow",
+   "kind": "other",
+   "drawn": true,
+   "note": "shallow water (art round 14b, approved by Michael 2026-10-31), a seamless 256x128 world texture, no shore: the shallows' blended kind (data/ground.json terrain `shallow`)"
   },
   {
    "id": "ground_water",
@@ -8636,6 +8654,12 @@
    "kind": "placeholder box",
    "drawn": false,
    "note": "the UI kit (docs/23, step 4): the brick frame, the cutout well (and a thin one for the belt), the cell the bag's grid is tiled with, the flat plate (headers, the belt's bar), the button in three states; `slices` is each picture's corner in interface pixels (src/ui/kit.js); the colours are Michael's to tune"
+  },
+  {
+   "id": "wade_ripple",
+   "kind": "other",
+   "drawn": true,
+   "note": "back_<i> before the figure, front_<i> after it, at the feet, while it stands in shallow water; the figure's lowest 3 px not drawn Approved by Michael 2026-10-31; drawn by render/frogs.js."
   },
   {
    "id": "wall_battlement",
@@ -12769,7 +12793,7 @@
   },
   {
    "path": "ground.js",
-   "lines": 1011
+   "lines": 1035
   },
   {
    "path": "entities/animal.js",
@@ -12837,7 +12861,7 @@
   },
   {
    "path": "render/scene.js",
-   "lines": 420
+   "lines": 425
   },
   {
    "path": "ui/map-panel.js",
@@ -12990,6 +13014,10 @@
   {
    "path": "woods.js",
    "lines": 186
+  },
+  {
+   "path": "render/frogs.js",
+   "lines": 178
   },
   {
    "path": "water.js",

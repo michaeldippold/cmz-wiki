@@ -17,6 +17,12 @@ A tile that is wholly water stops every body: you, [[The dead]], and villagers. 
 
 Shallow water can be walked by everyone at {{n sprites.floor_water_shallow.walk}} of their usual speed. The valley's ford, where the drove crosses the river, is shallow. Paths treat it as ordinary ground and do not avoid it.
 
+### How the shallows look
+
+Shallow water is a blended ground of its own, as dirt and cobblestone are: it meets grass and dirt with a ragged, pixel-crisp edge, a pale waterline along that edge and a band of dark, wet earth just outside it. Deep water sits inside the shallows, so a pond painted with a margin of shallow water round it reads as a pond with a wading edge. Lily pads, one of them flowering, float on the shallows and on deep water, kept clear of the bank; rushes, reedmace, arrowhead, and sedge stand in the shallows where they meet the shore.
+
+**Frogs** live on some shallow tiles: one sits, blinks, and swells its throat, and every so often crouches and hops to a shallow tile beside it, landing in a small splash, and later hops back. **Anyone wading** has a ring of ripples round their feet, you, a friend, or one of [[The dead]]; a wading corpse's ring shows only while you can see it, and fades with it in the dark. Both are pictures only, the same for everyone in the world at the same moment, and nothing about them is saved.
+
 ### Drinking and filling
 
 Standing beside any water tile, deep or shallow, the menu offers two actions. E does the first when you are thirsty.
@@ -97,6 +103,8 @@ A guest's drink or fill is sent to the host by the tile it names and run there a
 - `src/game.js:418`, `src/entities/character.js:64-74`: a skin's clean water in the sync check and the save (game #435, at fa2997f)
 - `data/sprites/floor_water.json`, `src/map.js:1457-1460`, `src/map.js:1531-1538`: wholly water is walked by nobody
 - `tools/mapgen/valley.py:160-164`: the river, the stone bridge on the high street, the ford where the drove crosses
+- `data/ground.json` (the `shallow` terrain kind, its `rim` and `bank`, the `lily` and `waterplant` decals), `src/ground.js` (the waterline, the wet bank, `inset`, `where: "shore"`): the shallows blended, lily pads and water plants (game #624, at 863aaf1)
+- `src/render/frogs.js` (`FROGS`, `frogAt`, `frogDrawables`, `wadeDrawables`), `data/sprites/critter_frog.json`, `data/sprites/frog_splash.json`, `data/sprites/wade_ripple.json`: frogs on the shallows and a wader's ring, from the sim clock, nothing saved or sent; a dead wader's ring only while seen (game #625, at 863aaf1)
 - `data/sprites/floor_water_shallow.json`, `src/map.js:1463-1466`, `src/entities/player.js:280`, `src/entities/movement.js:56`, `src/entities/zombie.js:405`: shallow water walked by everyone at its speed factor
 - `src/map.js:1498-1508`: paths treat shallow water as ordinary ground
 - `src/interact.js:681-716`, `src/interact.js:722-745`, `src/interact.js:907-912`: drinking and filling beside any water tile; E drinks when thirst is under 90

@@ -9,6 +9,12 @@ numbersOk: true
 
 Each time the wiki is synced with the game, an entry goes here, newest first, with the pages it touched. The game itself is in development; its own decision log is `docs/02-decisions.md` in the game's repository.
 
+## 2026-10-31: synced to `863aaf1`
+
+- **New in the game:** shallow water is a blended ground with a waterline and a wet bank, deep water inside it, lily pads, and water plants at the shore (game #624, art round 14b). [[Water]] and [[Terrain]] updated.
+- **New in the game:** frogs on the shallows, and a ring of ripples round anyone wading (game #625, art round 14b). [[Water]] updated.
+- **This wiki:** the [[Playtest checklist]] caught up with the game: the height build (game #601 to #611), the build tools (#612 to #619), and the batch of 2026-10-31 (#620 to #625).
+
 ## 2026-10-31: synced to `5114c2f`
 
 - **Changed in the game:** villagers never follow you or stay where told (Michael struck the plan; game #620). [[Villagers]], Planned.
